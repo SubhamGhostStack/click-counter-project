@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        BODY{
+            font-family: ARIAL;
+            color: WHITE;
+            background: BLACK;
+        }
+        SECTION{
+            display: FLEX;
+            justify-content: CENTER;
+            align-items: CENTER;
+        }
+        .MAIN H1{
+            text-align: CENTER;
+            font-size: 60PX;
+        }
+        .MAIN{
+            padding: 50PX 10%;
+        }
+            
+        
+         .allbtn{
+            display: FLEX;
+            justify-content: CENTER;
+            align-items: CENTER;
+            
+        } 
+        button{
+            font-size: 30px;
+            gap: 15px;
+            
+            margin: 10px;
+            width: 120px;
+            cursor: pointer;
+        }
+        button:hover{
+            animation: forwards;
+            
+        }
+        .special{
+            color: #38bdf8;
+        }
+
+        @media(max-width:900px){
+            button{
+                font-size: 20px;
+                width: 80px;
+            }
+            .MAIN h1{
+                font-size: 45px;
+            }
+        }
+        @media(max-width:600px){
+            
+            .allbtn{
+                
+                flex-wrap: WRAP;
+            }
+        }
+        
+    </STYLE>
+</head>
+<body >
+    <SECTION class="body">
+        <DIV class="MAIN">
+            <h1>CLICK COUNT</h1>
+            <H1 class="special">0</H1>
+            <div class="allbtn">
+            <BUTTON CLASS="INCREMENT">++</BUTTON>
+            <BUTTON CLASS="DECREMENT">--</BUTTON>
+            <BUTTON CLASS="RESET">RESET</BUTTON>
+
+            
+            </div>
+        </DIV>
+    </SECTION>
+
+    <SCRIPT>
+        let x=document.querySelector(".special");
+        let incr=document.querySelector(".INCREMENT");
+        let decre=document.querySelector(".DECREMENT");
+        let reset=document.querySelector(".RESET");
+        let body=document.querySelector(".body");
+                var counter=0;
+
+        incr.addEventListener("click",()=>{
+            x.textContent= ++counter;
+            
+        })
+
+        decre.addEventListener("click",()=>{
+            if(counter>0){
+             
+            x.textContent= --counter;
+            }
+            
+                
+                
+                
+            
+        })
+
+        reset.addEventListener("click",()=>{
+            counter=0;
+            x.textContent=counter;
+           
+        })
+    </SCRIPT>
+</body>
+</html>
